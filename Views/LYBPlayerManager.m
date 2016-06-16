@@ -8,10 +8,10 @@
 
 #import "LYBPlayerManager.h"
 #import "LYBPlayerView.h"
-#import "THThumbnail.h"
+#import "LYBThumbnail.h"
 #import "AVAsset+THAdditions.h"
 #import "UIAlertView+THAdditions.h"
-#import "THNotifications.h"
+#import "LYBNotifications.h"
 #import <AVFoundation/AVFoundation.h>
 
 //状态
@@ -312,7 +312,7 @@ static const NSString   * PlayerItemBufferEmpty;
         if (result == AVAssetImageGeneratorSucceeded) {
             UIImage *image = [UIImage imageWithCGImage:imageRef];
             id thumbnail =
-            [THThumbnail thumbnailWithImage:image time:actualTime];
+            [LYBThumbnail thumbnailWithImage:image time:actualTime];
             [images addObject:thumbnail];
         } else {
             NSLog(@"Error: %@", [error localizedDescription]);

@@ -26,8 +26,8 @@
 		B39391981D0EAEAD009E2C83 /* UIAlertView+THAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B39391931D0EAEAD009E2C83 /* UIAlertView+THAdditions.m */; };
 		B39391991D0EAEAD009E2C83 /* UIView+THAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B39391951D0EAEAD009E2C83 /* UIView+THAdditions.m */; };
 		B393919D1D0FF485009E2C83 /* LYBPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B393919C1D0FF485009E2C83 /* LYBPlayerManager.m */; };
-		B39391C81D1000BA009E2C83 /* THNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = B39391C51D1000BA009E2C83 /* THNotifications.m */; };
-		B39391C91D1000BA009E2C83 /* THThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = B39391C71D1000BA009E2C83 /* THThumbnail.m */; };
+		B39391C81D1000BA009E2C83 /* LYBNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = B39391C51D1000BA009E2C83 /* LYBNotifications.m */; };
+		B39391C91D1000BA009E2C83 /* LYBThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = B39391C71D1000BA009E2C83 /* LYBThumbnail.m */; };
 		B3B63DB41D090C9A00780097 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B63DB31D090C9A00780097 /* main.m */; };
 		B3B63DB71D090C9A00780097 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B63DB61D090C9A00780097 /* AppDelegate.m */; };
 		B3B63DB91D090C9A00780097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B63DB81D090C9A00780097 /* Assets.xcassets */; };
@@ -64,10 +64,10 @@
 		B393919A1D0EB3E1009E2C83 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B393919B1D0FF485009E2C83 /* LYBPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBPlayerManager.h; sourceTree = "<group>"; };
 		B393919C1D0FF485009E2C83 /* LYBPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBPlayerManager.m; sourceTree = "<group>"; };
-		B39391C41D1000BA009E2C83 /* THNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THNotifications.h; sourceTree = "<group>"; };
-		B39391C51D1000BA009E2C83 /* THNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THNotifications.m; sourceTree = "<group>"; };
-		B39391C61D1000BA009E2C83 /* THThumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THThumbnail.h; sourceTree = "<group>"; };
-		B39391C71D1000BA009E2C83 /* THThumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THThumbnail.m; sourceTree = "<group>"; };
+		B39391C41D1000BA009E2C83 /* LYBNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBNotifications.h; sourceTree = "<group>"; };
+		B39391C51D1000BA009E2C83 /* LYBNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBNotifications.m; sourceTree = "<group>"; };
+		B39391C61D1000BA009E2C83 /* LYBThumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBThumbnail.h; sourceTree = "<group>"; };
+		B39391C71D1000BA009E2C83 /* LYBThumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBThumbnail.m; sourceTree = "<group>"; };
 		B3B63DAF1D090C9A00780097 /* LYBVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYBVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B63DB31D090C9A00780097 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B3B63DB51D090C9A00780097 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,10 +100,10 @@
 		B39391691D0E91B9009E2C83 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				B39391C41D1000BA009E2C83 /* THNotifications.h */,
-				B39391C51D1000BA009E2C83 /* THNotifications.m */,
-				B39391C61D1000BA009E2C83 /* THThumbnail.h */,
-				B39391C71D1000BA009E2C83 /* THThumbnail.m */,
+				B39391C41D1000BA009E2C83 /* LYBNotifications.h */,
+				B39391C51D1000BA009E2C83 /* LYBNotifications.m */,
+				B39391C61D1000BA009E2C83 /* LYBThumbnail.h */,
+				B39391C71D1000BA009E2C83 /* LYBThumbnail.m */,
 				B39391701D0E9447009E2C83 /* knob_highlighted.png */,
 				B39391711D0E9447009E2C83 /* knob_highlighted@2x.png */,
 				B39391721D0E9447009E2C83 /* knob.png */,
@@ -278,9 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B39391C91D1000BA009E2C83 /* THThumbnail.m in Sources */,
+				B39391C91D1000BA009E2C83 /* LYBThumbnail.m in Sources */,
 				B393916D1D0E920C009E2C83 /* LYBOverlayView.m in Sources */,
-				B39391C81D1000BA009E2C83 /* THNotifications.m in Sources */,
+				B39391C81D1000BA009E2C83 /* LYBNotifications.m in Sources */,
 				B39391871D0EA721009E2C83 /* LYBPlayerView.m in Sources */,
 				B3B63DB71D090C9A00780097 /* AppDelegate.m in Sources */,
 				B39391991D0EAEAD009E2C83 /* UIView+THAdditions.m in Sources */,
