@@ -31,7 +31,7 @@ static const NSString   * PlayerItemBufferEmpty;
 
 @interface LYBPlayerManager()<LYBTransportDelegate>
 
-@property (strong, nonatomic) AVURLAsset    * asset;     //视频的静态信息
+@property (strong, nonatomic) AVAsset    * asset;     //视频的静态信息
 @property (strong, nonatomic) AVPlayerItem  * playerItem;//视频的动态信息
 @property (strong, nonatomic) AVPlayer      * player;
 @property (strong, nonatomic) LYBPlayerView * playerView;
@@ -74,7 +74,8 @@ static const NSString   * PlayerItemBufferEmpty;
 
 - (void)setUrl:(NSString *)url{
     _url = url;
-    self.asset = [AVURLAsset assetWithURL:[NSURL URLWithString:url]];
+    BOOL flag = NO;
+    self.asset = [AVAsset assetWithURL:[NSURL URLWithString:url]];
     NSArray *keys = @[
                       @"tracks",
                       @"duration",
@@ -83,11 +84,24 @@ static const NSString   * PlayerItemBufferEmpty;
                       ];
     
     if (self.playerItem) {
-        [self.playerItem removeObserver:self forKeyPath:STATUS_KEYPATH];
         [self.playerItem removeObserver:self
                              forKeyPath:BUFFER_KEYPATH];
+        [self.playerItem removeObserver:self
+                             forKeyPath:KEEPUP_KEYPATH];
+        [self.player removeTimeObserver:self.timeObserver];
+        
+        if (self.itemEndObserver) {
+            NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+            [nc removeObserver:self.itemEndObserver
+                          name:AVPlayerItemDidPlayToEndTimeNotification
+                        object:self.player.currentItem];
+            self.itemEndObserver = nil;
+        }
+        
+        self.playerItem = nil;
+        flag = YES;
+        
     }
-    
     self.playerItem = [AVPlayerItem playerItemWithAsset:self.asset
                            automaticallyLoadedAssetKeys:keys];
     
@@ -96,7 +110,12 @@ static const NSString   * PlayerItemBufferEmpty;
                          options:0
                          context:&PlayerItemStatusContext];
     
-    self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
+    if (flag) {
+        [self.player replaceCurrentItemWithPlayerItem:self.playerItem];
+    }else{
+        self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
+    }
+    
     self.playerView.player = self.player;
 }
 
@@ -438,8 +457,6 @@ static const NSString   * PlayerItemBufferEmpty;
 - (void)manualPause:(BOOL)pause{
     _isManualPause = pause;
 }
-
-
 
 @end
 

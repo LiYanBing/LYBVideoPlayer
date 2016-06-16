@@ -41,6 +41,12 @@
     UIView * playView = [_manager view];
     _manager.autoRatate = YES;
     [headerView addSubview:playView];
+    
+    [self performSelector:@selector(toDo) withObject:nil afterDelay:10];
+}
+
+- (void)toDo{
+    _manager.url = @"http://7mnm7p.com2.z0.glb.qiniucdn.com/o_1ag32dgdt1lt3115l1foo5q01cgi1t.mp4";
 }
 
 - (IBAction)playLocalVideo:(id)sender {
