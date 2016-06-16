@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B393916D1D0E920C009E2C83 /* LYBOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B393916C1D0E920C009E2C83 /* LYBOverlayView.m */; };
+		B393916F1D0E9223009E2C83 /* LYBOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B393916E1D0E9223009E2C83 /* LYBOverlayView.xib */; };
+		B393917A1D0E9447009E2C83 /* knob_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = B39391701D0E9447009E2C83 /* knob_highlighted.png */; };
+		B393917B1D0E9447009E2C83 /* knob_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B39391711D0E9447009E2C83 /* knob_highlighted@2x.png */; };
+		B393917C1D0E9447009E2C83 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = B39391721D0E9447009E2C83 /* knob.png */; };
+		B393917D1D0E9447009E2C83 /* knob@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B39391731D0E9447009E2C83 /* knob@2x.png */; };
+		B393917E1D0E9447009E2C83 /* pause_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B39391741D0E9447009E2C83 /* pause_button.png */; };
+		B393917F1D0E9447009E2C83 /* pause_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B39391751D0E9447009E2C83 /* pause_button@2x.png */; };
+		B39391801D0E9447009E2C83 /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B39391761D0E9447009E2C83 /* play_button.png */; };
+		B39391811D0E9447009E2C83 /* play_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B39391771D0E9447009E2C83 /* play_button@2x.png */; };
+		B39391821D0E9447009E2C83 /* tp_info_popup.png in Resources */ = {isa = PBXBuildFile; fileRef = B39391781D0E9447009E2C83 /* tp_info_popup.png */; };
+		B39391831D0E9447009E2C83 /* tp_info_popup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B39391791D0E9447009E2C83 /* tp_info_popup@2x.png */; };
+		B39391871D0EA721009E2C83 /* LYBPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B39391861D0EA721009E2C83 /* LYBPlayerView.m */; };
+		B393918B1D0EA86C009E2C83 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B39391891D0EA86C009E2C83 /* RootViewController.m */; };
+		B39391961D0EAEAD009E2C83 /* AVAsset+THAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B393918F1D0EAEAD009E2C83 /* AVAsset+THAdditions.m */; };
+		B39391971D0EAEAD009E2C83 /* NSTimer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B39391911D0EAEAD009E2C83 /* NSTimer+Additions.m */; };
+		B39391981D0EAEAD009E2C83 /* UIAlertView+THAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B39391931D0EAEAD009E2C83 /* UIAlertView+THAdditions.m */; };
+		B39391991D0EAEAD009E2C83 /* UIView+THAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B39391951D0EAEAD009E2C83 /* UIView+THAdditions.m */; };
+		B393919D1D0FF485009E2C83 /* LYBPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B393919C1D0FF485009E2C83 /* LYBPlayerManager.m */; };
+		B39391C81D1000BA009E2C83 /* THNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = B39391C51D1000BA009E2C83 /* THNotifications.m */; };
+		B39391C91D1000BA009E2C83 /* THThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = B39391C71D1000BA009E2C83 /* THThumbnail.m */; };
 		B3B63DB41D090C9A00780097 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B63DB31D090C9A00780097 /* main.m */; };
 		B3B63DB71D090C9A00780097 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B63DB61D090C9A00780097 /* AppDelegate.m */; };
 		B3B63DB91D090C9A00780097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B63DB81D090C9A00780097 /* Assets.xcassets */; };
@@ -14,6 +35,39 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B393916B1D0E920C009E2C83 /* LYBOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBOverlayView.h; sourceTree = "<group>"; };
+		B393916C1D0E920C009E2C83 /* LYBOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBOverlayView.m; sourceTree = "<group>"; };
+		B393916E1D0E9223009E2C83 /* LYBOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYBOverlayView.xib; sourceTree = "<group>"; };
+		B39391701D0E9447009E2C83 /* knob_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob_highlighted.png; sourceTree = "<group>"; };
+		B39391711D0E9447009E2C83 /* knob_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "knob_highlighted@2x.png"; sourceTree = "<group>"; };
+		B39391721D0E9447009E2C83 /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob.png; sourceTree = "<group>"; };
+		B39391731D0E9447009E2C83 /* knob@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "knob@2x.png"; sourceTree = "<group>"; };
+		B39391741D0E9447009E2C83 /* pause_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause_button.png; sourceTree = "<group>"; };
+		B39391751D0E9447009E2C83 /* pause_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause_button@2x.png"; sourceTree = "<group>"; };
+		B39391761D0E9447009E2C83 /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_button.png; sourceTree = "<group>"; };
+		B39391771D0E9447009E2C83 /* play_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play_button@2x.png"; sourceTree = "<group>"; };
+		B39391781D0E9447009E2C83 /* tp_info_popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tp_info_popup.png; sourceTree = "<group>"; };
+		B39391791D0E9447009E2C83 /* tp_info_popup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tp_info_popup@2x.png"; sourceTree = "<group>"; };
+		B39391841D0EA534009E2C83 /* LYBTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBTransport.h; sourceTree = "<group>"; };
+		B39391851D0EA721009E2C83 /* LYBPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBPlayerView.h; sourceTree = "<group>"; };
+		B39391861D0EA721009E2C83 /* LYBPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBPlayerView.m; sourceTree = "<group>"; };
+		B39391881D0EA86C009E2C83 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		B39391891D0EA86C009E2C83 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		B393918E1D0EAEAD009E2C83 /* AVAsset+THAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVAsset+THAdditions.h"; sourceTree = "<group>"; };
+		B393918F1D0EAEAD009E2C83 /* AVAsset+THAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVAsset+THAdditions.m"; sourceTree = "<group>"; };
+		B39391901D0EAEAD009E2C83 /* NSTimer+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Additions.h"; sourceTree = "<group>"; };
+		B39391911D0EAEAD009E2C83 /* NSTimer+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Additions.m"; sourceTree = "<group>"; };
+		B39391921D0EAEAD009E2C83 /* UIAlertView+THAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+THAdditions.h"; sourceTree = "<group>"; };
+		B39391931D0EAEAD009E2C83 /* UIAlertView+THAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+THAdditions.m"; sourceTree = "<group>"; };
+		B39391941D0EAEAD009E2C83 /* UIView+THAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+THAdditions.h"; sourceTree = "<group>"; };
+		B39391951D0EAEAD009E2C83 /* UIView+THAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+THAdditions.m"; sourceTree = "<group>"; };
+		B393919A1D0EB3E1009E2C83 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B393919B1D0FF485009E2C83 /* LYBPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBPlayerManager.h; sourceTree = "<group>"; };
+		B393919C1D0FF485009E2C83 /* LYBPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBPlayerManager.m; sourceTree = "<group>"; };
+		B39391C41D1000BA009E2C83 /* THNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THNotifications.h; sourceTree = "<group>"; };
+		B39391C51D1000BA009E2C83 /* THNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THNotifications.m; sourceTree = "<group>"; };
+		B39391C61D1000BA009E2C83 /* THThumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THThumbnail.h; sourceTree = "<group>"; };
+		B39391C71D1000BA009E2C83 /* THThumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THThumbnail.m; sourceTree = "<group>"; };
 		B3B63DAF1D090C9A00780097 /* LYBVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYBVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B63DB31D090C9A00780097 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B3B63DB51D090C9A00780097 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -34,9 +88,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B39391681D0E91B9009E2C83 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B39391881D0EA86C009E2C83 /* RootViewController.h */,
+				B39391891D0EA86C009E2C83 /* RootViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B39391691D0E91B9009E2C83 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				B39391C41D1000BA009E2C83 /* THNotifications.h */,
+				B39391C51D1000BA009E2C83 /* THNotifications.m */,
+				B39391C61D1000BA009E2C83 /* THThumbnail.h */,
+				B39391C71D1000BA009E2C83 /* THThumbnail.m */,
+				B39391701D0E9447009E2C83 /* knob_highlighted.png */,
+				B39391711D0E9447009E2C83 /* knob_highlighted@2x.png */,
+				B39391721D0E9447009E2C83 /* knob.png */,
+				B39391731D0E9447009E2C83 /* knob@2x.png */,
+				B39391741D0E9447009E2C83 /* pause_button.png */,
+				B39391751D0E9447009E2C83 /* pause_button@2x.png */,
+				B39391761D0E9447009E2C83 /* play_button.png */,
+				B39391771D0E9447009E2C83 /* play_button@2x.png */,
+				B39391781D0E9447009E2C83 /* tp_info_popup.png */,
+				B39391791D0E9447009E2C83 /* tp_info_popup@2x.png */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		B393916A1D0E91B9009E2C83 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B393919B1D0FF485009E2C83 /* LYBPlayerManager.h */,
+				B393919C1D0FF485009E2C83 /* LYBPlayerManager.m */,
+				B39391841D0EA534009E2C83 /* LYBTransport.h */,
+				B393916B1D0E920C009E2C83 /* LYBOverlayView.h */,
+				B393916C1D0E920C009E2C83 /* LYBOverlayView.m */,
+				B393916E1D0E9223009E2C83 /* LYBOverlayView.xib */,
+				B39391851D0EA721009E2C83 /* LYBPlayerView.h */,
+				B39391861D0EA721009E2C83 /* LYBPlayerView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B393918D1D0EAEAD009E2C83 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B393918E1D0EAEAD009E2C83 /* AVAsset+THAdditions.h */,
+				B393918F1D0EAEAD009E2C83 /* AVAsset+THAdditions.m */,
+				B39391901D0EAEAD009E2C83 /* NSTimer+Additions.h */,
+				B39391911D0EAEAD009E2C83 /* NSTimer+Additions.m */,
+				B39391921D0EAEAD009E2C83 /* UIAlertView+THAdditions.h */,
+				B39391931D0EAEAD009E2C83 /* UIAlertView+THAdditions.m */,
+				B39391941D0EAEAD009E2C83 /* UIView+THAdditions.h */,
+				B39391951D0EAEAD009E2C83 /* UIView+THAdditions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		B3B63DA61D090C9A00780097 = {
 			isa = PBXGroup;
 			children = (
+				B393918D1D0EAEAD009E2C83 /* Categories */,
+				B39391681D0E91B9009E2C83 /* Controllers */,
+				B39391691D0E91B9009E2C83 /* Support */,
+				B393916A1D0E91B9009E2C83 /* Views */,
+				B3B63DC31D090E1500780097 /* VideoPlayer */,
 				B3B63DB11D090C9A00780097 /* LYBVideoPlayer */,
 				B3B63DB01D090C9A00780097 /* Products */,
 			);
@@ -67,8 +186,16 @@
 			isa = PBXGroup;
 			children = (
 				B3B63DB31D090C9A00780097 /* main.m */,
+				B393919A1D0EB3E1009E2C83 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3B63DC31D090E1500780097 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VideoPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,7 +256,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3B63DB91D090C9A00780097 /* Assets.xcassets in Resources */,
+				B393917F1D0E9447009E2C83 /* pause_button@2x.png in Resources */,
+				B39391821D0E9447009E2C83 /* tp_info_popup.png in Resources */,
+				B393917A1D0E9447009E2C83 /* knob_highlighted.png in Resources */,
+				B393916F1D0E9223009E2C83 /* LYBOverlayView.xib in Resources */,
+				B393917B1D0E9447009E2C83 /* knob_highlighted@2x.png in Resources */,
+				B393917E1D0E9447009E2C83 /* pause_button.png in Resources */,
+				B393917D1D0E9447009E2C83 /* knob@2x.png in Resources */,
+				B39391801D0E9447009E2C83 /* play_button.png in Resources */,
 				B3B63DBC1D090C9A00780097 /* LaunchScreen.storyboard in Resources */,
+				B39391831D0E9447009E2C83 /* tp_info_popup@2x.png in Resources */,
+				B393917C1D0E9447009E2C83 /* knob.png in Resources */,
+				B39391811D0E9447009E2C83 /* play_button@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,8 +278,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B39391C91D1000BA009E2C83 /* THThumbnail.m in Sources */,
+				B393916D1D0E920C009E2C83 /* LYBOverlayView.m in Sources */,
+				B39391C81D1000BA009E2C83 /* THNotifications.m in Sources */,
+				B39391871D0EA721009E2C83 /* LYBPlayerView.m in Sources */,
 				B3B63DB71D090C9A00780097 /* AppDelegate.m in Sources */,
+				B39391991D0EAEAD009E2C83 /* UIView+THAdditions.m in Sources */,
+				B39391981D0EAEAD009E2C83 /* UIAlertView+THAdditions.m in Sources */,
+				B39391961D0EAEAD009E2C83 /* AVAsset+THAdditions.m in Sources */,
+				B393919D1D0FF485009E2C83 /* LYBPlayerManager.m in Sources */,
 				B3B63DB41D090C9A00780097 /* main.m in Sources */,
+				B393918B1D0EA86C009E2C83 /* RootViewController.m in Sources */,
+				B39391971D0EAEAD009E2C83 /* NSTimer+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +328,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -224,6 +373,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -245,10 +395,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = LYBVideoPlayer/PrefixHeader.pch;
 				INFOPLIST_FILE = LYBVideoPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WeiHui.LYBVideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -256,10 +410,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = LYBVideoPlayer/PrefixHeader.pch;
 				INFOPLIST_FILE = LYBVideoPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WeiHui.LYBVideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -282,6 +440,7 @@
 				B3B63DC21D090C9A00780097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

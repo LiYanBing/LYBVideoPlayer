@@ -1,15 +1,202 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LYBOverlayView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" id="TMI-5t-RMF">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem id="RLU-YM-SAM">
+                            <barButtonItem key="leftBarButtonItem" title="Down" id="rU0-Om-0rD">
+                                <color key="tintColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="closeControls:" destination="iN0-l3-epB" id="2BY-12-Vlf"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Show" id="qIF-uq-tgK">
+                                <color key="tintColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ouK-7m-oL4">
+                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" id="LVk-VO-jXf">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="M4S-Wt-7Rv">
+                                <rect key="frame" x="16" y="2" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="play_button.png"/>
+                                <state key="selected" image="pause_button.png"/>
+                                <connections>
+                                    <action selector="playControls:" destination="iN0-l3-epB" eventType="touchUpInside" id="w8W-Mf-763"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem style="plain" id="SHh-2a-RlR">
+                            <view key="customView" contentMode="scaleToFill" id="X56-HL-o8s">
+                                <rect key="frame" x="66" y="11.5" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xUR-we-bBE">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </barButtonItem>
+                        <barButtonItem style="plain" id="DOX-3p-8WT">
+                            <view key="customView" contentMode="scaleToFill" id="b1x-uU-O0r">
+                                <rect key="frame" x="118" y="2" width="85" height="40"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="8nl-N1-BMk">
+                                        <rect key="frame" x="0.0" y="20" width="85" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="progressTintColor" red="0.41459057360000001" green="0.6268496536" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </progressView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="V0P-6s-lHS">
+                                        <rect key="frame" x="-2" y="5" width="89" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </barButtonItem>
+                        <barButtonItem style="plain" id="nQc-dZ-xqM">
+                            <view key="customView" contentMode="scaleToFill" id="iqw-05-5yP">
+                                <rect key="frame" x="213" y="11.5" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QH9-eW-CAC">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </barButtonItem>
+                        <barButtonItem image="knob.png" style="plain" id="NxS-iS-0RT">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Cr-1p-OKe">
+                                <rect key="frame" x="265" y="2" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="全屏">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeScreen:" destination="iN0-l3-epB" eventType="touchUpInside" id="lGK-Io-NBq"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <view contentMode="scaleToFill" id="agr-U0-p2G">
+                    <rect key="frame" x="130" y="491" width="83" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tp_info_popup.png" id="sJq-Nh-ikP">
+                            <rect key="frame" x="0.0" y="0.0" width="83" height="33"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sRe-lG-JGi">
+                            <rect key="frame" x="17" y="3" width="50" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view alpha="0.65000000000000002" contentMode="scaleToFill" id="abq-sc-lUv">
+                    <rect key="frame" x="100" y="259" width="100" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123k/s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZzZ-Iq-Yeg">
+                            <rect key="frame" x="0.0" y="5" width="120" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.15519021767761032" green="1" blue="0.080590679432364198" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在缓冲..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rpF-pj-HeU">
+                            <rect key="frame" x="2" y="25" width="118" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="SUu-xV-sCQ">
+                            <rect key="frame" x="32" y="6" width="37" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="activeView" destination="SUu-xV-sCQ" id="aBE-Sp-b5s"/>
+                <outlet property="buffingLabel" destination="rpF-pj-HeU" id="BGf-oW-2kF"/>
+                <outlet property="currentTimeLabel" destination="xUR-we-bBE" id="h1u-Eh-5Ey"/>
+                <outlet property="infoLabel" destination="sRe-lG-JGi" id="Cd4-2k-GyC"/>
+                <outlet property="infoView" destination="agr-U0-p2G" id="9jO-Wf-Owj"/>
+                <outlet property="navgationBar" destination="TMI-5t-RMF" id="O9f-Et-Vq1"/>
+                <outlet property="netAlertView" destination="abq-sc-lUv" id="VLj-ib-Jh4"/>
+                <outlet property="netStreamLabel" destination="ZzZ-Iq-Yeg" id="mhp-J2-0f7"/>
+                <outlet property="progressView" destination="8nl-N1-BMk" id="Iir-8h-z14"/>
+                <outlet property="remindingTimeLabel" destination="QH9-eW-CAC" id="pFx-vx-HSt"/>
+                <outlet property="scrubberSlider" destination="V0P-6s-lHS" id="um0-Gm-h30"/>
+                <outlet property="togglePlaybackButton" destination="M4S-Wt-7Rv" id="pSF-J9-G93"/>
+                <outlet property="toolBar" destination="ouK-7m-oL4" id="7Hf-l6-8nd"/>
+                <outletCollection property="gestureRecognizers" destination="QBO-aD-fcT" appends="YES" id="i71-bj-oBg"/>
+                <outletCollection property="gestureRecognizers" destination="RGk-T6-kbb" appends="YES" id="myK-xZ-G5T"/>
+            </connections>
+            <point key="canvasLocation" x="-1573" y="-450"/>
         </view>
+        <tapGestureRecognizer id="QBO-aD-fcT">
+            <connections>
+                <action selector="toggleControls:" destination="iN0-l3-epB" id="Qxl-VN-Lyq"/>
+                <outlet property="delegate" destination="iN0-l3-epB" id="vAV-D6-zgy"/>
+            </connections>
+        </tapGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="RGk-T6-kbb">
+            <connections>
+                <action selector="tapAction:" destination="iN0-l3-epB" id="cS8-29-ah3"/>
+                <outlet property="delegate" destination="iN0-l3-epB" id="qWe-p0-XQO"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
+    <resources>
+        <image name="knob.png" width="29" height="29"/>
+        <image name="pause_button.png" width="19" height="21"/>
+        <image name="play_button.png" width="21" height="24"/>
+        <image name="tp_info_popup.png" width="83" height="33"/>
+    </resources>
 </document>
