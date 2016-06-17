@@ -78,6 +78,7 @@ typedef NS_ENUM(NSInteger,UIScreenType){
  * 总时间
  */
 @property (weak, nonatomic) IBOutlet UILabel *remindingTimeLabel;
+@property (weak, nonatomic) IBOutlet UIButton *fullbutton;
 
 /**
  * 是否支持屏幕旋转

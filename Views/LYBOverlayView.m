@@ -55,6 +55,7 @@
 - (void)setIsFullScreen:(BOOL)isFullScreen{
     _isFullScreen = isFullScreen;
     self.netAlertView.center = self.center;
+    self.fullbutton.selected = isFullScreen;
 }
 
 - (void)awakeFromNib {

@@ -94,6 +94,7 @@
  * 竖屏
  */
 - (void)portraitScreen{
+    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait animated:YES];
     [UIView animateWithDuration:0.25 animations:^{
         self.transform = CGAffineTransformIdentity;
         self.frame     = _originalFrame;
@@ -105,6 +106,7 @@
  * 左横屏
  */
 - (void)leftScreen{
+    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeRight animated:YES];
     [UIView animateWithDuration:0.25 animations:^{
         self.transform = CGAffineTransformMakeRotation(M_PI_2);
         self.frame     = CGRectMake(0, 0, WIDTH, HEIGHT);
@@ -117,6 +119,7 @@
  * 右横屏
  */
 - (void)rightScreen{
+    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeLeft animated:YES];
     [UIView animateWithDuration:0.25 animations:^{
         self.transform = CGAffineTransformMakeRotation(-M_PI_2);
         self.frame     = CGRectMake(0, 0, WIDTH, HEIGHT);

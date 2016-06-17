@@ -98,13 +98,14 @@
                             </view>
                         </barButtonItem>
                         <barButtonItem image="knob.png" style="plain" id="NxS-iS-0RT">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Cr-1p-OKe">
-                                <rect key="frame" x="265" y="2" width="40" height="40"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9Cr-1p-OKe">
+                                <rect key="frame" x="265" y="11" width="52" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="全屏">
+                                <state key="normal" image="CDPZoomIn.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="CDPZoomOut.png"/>
                                 <connections>
                                     <action selector="changeScreen:" destination="iN0-l3-epB" eventType="touchUpInside" id="lGK-Io-NBq"/>
                                 </connections>
@@ -165,6 +166,7 @@
                 <outlet property="activeView" destination="SUu-xV-sCQ" id="aBE-Sp-b5s"/>
                 <outlet property="buffingLabel" destination="rpF-pj-HeU" id="BGf-oW-2kF"/>
                 <outlet property="currentTimeLabel" destination="xUR-we-bBE" id="h1u-Eh-5Ey"/>
+                <outlet property="fullbutton" destination="9Cr-1p-OKe" id="bsb-f1-CeQ"/>
                 <outlet property="infoLabel" destination="sRe-lG-JGi" id="Cd4-2k-GyC"/>
                 <outlet property="infoView" destination="agr-U0-p2G" id="9jO-Wf-Owj"/>
                 <outlet property="navgationBar" destination="TMI-5t-RMF" id="O9f-Et-Vq1"/>
@@ -194,6 +196,8 @@
         </panGestureRecognizer>
     </objects>
     <resources>
+        <image name="CDPZoomIn.png" width="16" height="16"/>
+        <image name="CDPZoomOut.png" width="16" height="16"/>
         <image name="knob.png" width="29" height="29"/>
         <image name="pause_button.png" width="19" height="21"/>
         <image name="play_button.png" width="21" height="24"/>

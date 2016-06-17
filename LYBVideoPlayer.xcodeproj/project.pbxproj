@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B314BDDE1D13A463008B7847 /* CDPZoomIn.png in Resources */ = {isa = PBXBuildFile; fileRef = B314BDDB1D13A463008B7847 /* CDPZoomIn.png */; };
+		B314BDDF1D13A463008B7847 /* CDPZoomIn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B314BDDC1D13A463008B7847 /* CDPZoomIn@2x.png */; };
+		B314BDE01D13A463008B7847 /* CDPZoomOut@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B314BDDD1D13A463008B7847 /* CDPZoomOut@2x.png */; };
+		B314BDE21D13A473008B7847 /* CDPZoomOut.png in Resources */ = {isa = PBXBuildFile; fileRef = B314BDE11D13A473008B7847 /* CDPZoomOut.png */; };
 		B393916D1D0E920C009E2C83 /* LYBOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B393916C1D0E920C009E2C83 /* LYBOverlayView.m */; };
 		B393916F1D0E9223009E2C83 /* LYBOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B393916E1D0E9223009E2C83 /* LYBOverlayView.xib */; };
 		B393917A1D0E9447009E2C83 /* knob_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = B39391701D0E9447009E2C83 /* knob_highlighted.png */; };
@@ -35,6 +39,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B314BDDB1D13A463008B7847 /* CDPZoomIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CDPZoomIn.png; sourceTree = "<group>"; };
+		B314BDDC1D13A463008B7847 /* CDPZoomIn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CDPZoomIn@2x.png"; sourceTree = "<group>"; };
+		B314BDDD1D13A463008B7847 /* CDPZoomOut@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CDPZoomOut@2x.png"; sourceTree = "<group>"; };
+		B314BDE11D13A473008B7847 /* CDPZoomOut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CDPZoomOut.png; sourceTree = "<group>"; };
 		B393916B1D0E920C009E2C83 /* LYBOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBOverlayView.h; sourceTree = "<group>"; };
 		B393916C1D0E920C009E2C83 /* LYBOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBOverlayView.m; sourceTree = "<group>"; };
 		B393916E1D0E9223009E2C83 /* LYBOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYBOverlayView.xib; sourceTree = "<group>"; };
@@ -100,6 +108,10 @@
 		B39391691D0E91B9009E2C83 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				B314BDE11D13A473008B7847 /* CDPZoomOut.png */,
+				B314BDDB1D13A463008B7847 /* CDPZoomIn.png */,
+				B314BDDC1D13A463008B7847 /* CDPZoomIn@2x.png */,
+				B314BDDD1D13A463008B7847 /* CDPZoomOut@2x.png */,
 				B39391C41D1000BA009E2C83 /* LYBNotifications.h */,
 				B39391C51D1000BA009E2C83 /* LYBNotifications.m */,
 				B39391C61D1000BA009E2C83 /* LYBThumbnail.h */,
@@ -257,8 +269,12 @@
 			files = (
 				B3B63DB91D090C9A00780097 /* Assets.xcassets in Resources */,
 				B393917F1D0E9447009E2C83 /* pause_button@2x.png in Resources */,
+				B314BDE01D13A463008B7847 /* CDPZoomOut@2x.png in Resources */,
 				B39391821D0E9447009E2C83 /* tp_info_popup.png in Resources */,
+				B314BDDE1D13A463008B7847 /* CDPZoomIn.png in Resources */,
 				B393917A1D0E9447009E2C83 /* knob_highlighted.png in Resources */,
+				B314BDDF1D13A463008B7847 /* CDPZoomIn@2x.png in Resources */,
+				B314BDE21D13A473008B7847 /* CDPZoomOut.png in Resources */,
 				B393916F1D0E9223009E2C83 /* LYBOverlayView.xib in Resources */,
 				B393917B1D0E9447009E2C83 /* knob_highlighted@2x.png in Resources */,
 				B393917E1D0E9447009E2C83 /* pause_button.png in Resources */,
