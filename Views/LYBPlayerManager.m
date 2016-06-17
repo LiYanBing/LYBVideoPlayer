@@ -300,10 +300,12 @@ static const NSString   * PlayerItemBufferEmpty;
 
 - (void)generateThumbnails {
     
+    //copyCGImageAtTime:actualTime:error 在指定的时间点捕捉图片
+    //generateCGImagesAsynchronouslyForTimes:completionHandler:在第一个参数的指定的时间段捕捉图片
+    
     self.imageGenerator =
     [AVAssetImageGenerator assetImageGeneratorWithAsset:self.asset];
     
-    // Generate the @2x equivalent
     self.imageGenerator.maximumSize = CGSizeMake(200.0f, 0.0f);
     
     CMTime duration = self.asset.duration;
@@ -336,13 +338,13 @@ static const NSString   * PlayerItemBufferEmpty;
         } else {
             NSLog(@"Error: %@", [error localizedDescription]);
         }
-        
-        // If the decremented image count is at 0, we're all done.
+
         if (--imageCount == 0) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSString *name = THThumbnailsGeneratedNotification;
                 NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
                 [nc postNotificationName:name object:images];
+                NSLog(@"发送通知");
             });
         }
     };

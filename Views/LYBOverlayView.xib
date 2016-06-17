@@ -11,19 +11,49 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" id="Lhd-Ln-gRj" customClass="LYBFilmstripView">
+                    <rect key="frame" x="0.0" y="-100" width="320" height="100"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" id="Zeb-tf-2nE">
+                            <rect key="frame" x="0.0" y="40" width="320" height="55"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </scrollView>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" id="1I9-4R-LQM">
+                            <rect key="frame" x="150" y="58" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="actView" destination="1I9-4R-LQM" id="aNV-fH-gCH"/>
+                        <outlet property="scrollView" destination="Zeb-tf-2nE" id="z5E-hw-bpg"/>
+                    </connections>
+                </view>
                 <navigationBar contentMode="scaleToFill" id="TMI-5t-RMF">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <items>
                         <navigationItem id="RLU-YM-SAM">
+                            <nil key="title"/>
                             <barButtonItem key="leftBarButtonItem" title="Down" id="rU0-Om-0rD">
                                 <color key="tintColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="closeControls:" destination="iN0-l3-epB" id="2BY-12-Vlf"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" title="Show" id="qIF-uq-tgK">
-                                <color key="tintColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <barButtonItem key="rightBarButtonItem" style="plain" id="s2A-0H-BxF">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rN9-32-UA3">
+                                    <rect key="frame" x="258" y="7" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="show">
+                                        <color key="titleColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="show:" destination="iN0-l3-epB" eventType="touchUpInside" id="r9V-oE-Z9c"/>
+                                    </connections>
+                                </button>
                             </barButtonItem>
                         </navigationItem>
                     </items>
@@ -166,6 +196,8 @@
                 <outlet property="activeView" destination="SUu-xV-sCQ" id="aBE-Sp-b5s"/>
                 <outlet property="buffingLabel" destination="rpF-pj-HeU" id="BGf-oW-2kF"/>
                 <outlet property="currentTimeLabel" destination="xUR-we-bBE" id="h1u-Eh-5Ey"/>
+                <outlet property="filmStripView" destination="Lhd-Ln-gRj" id="ABR-Vg-jqa"/>
+                <outlet property="filmstripToggleButton" destination="rN9-32-UA3" id="gUr-NN-WNH"/>
                 <outlet property="fullbutton" destination="9Cr-1p-OKe" id="bsb-f1-CeQ"/>
                 <outlet property="infoLabel" destination="sRe-lG-JGi" id="Cd4-2k-GyC"/>
                 <outlet property="infoView" destination="agr-U0-p2G" id="9jO-Wf-Owj"/>
@@ -180,7 +212,7 @@
                 <outletCollection property="gestureRecognizers" destination="QBO-aD-fcT" appends="YES" id="i71-bj-oBg"/>
                 <outletCollection property="gestureRecognizers" destination="RGk-T6-kbb" appends="YES" id="myK-xZ-G5T"/>
             </connections>
-            <point key="canvasLocation" x="-1573" y="-450"/>
+            <point key="canvasLocation" x="-2157" y="-821"/>
         </view>
         <tapGestureRecognizer id="QBO-aD-fcT">
             <connections>

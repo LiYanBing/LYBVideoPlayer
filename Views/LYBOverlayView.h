@@ -37,6 +37,7 @@ typedef NS_ENUM(NSInteger,UIScreenType){
  */
 @property (weak, nonatomic) IBOutlet UINavigationBar *navgationBar;
 
+@property (weak, nonatomic) IBOutlet UIButton *filmstripToggleButton;
 
 /**
  * 拖动显示时间View

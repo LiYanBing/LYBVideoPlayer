@@ -42,7 +42,7 @@
     _manager.autoRatate = YES;
     [headerView addSubview:playView];
     
-    [self performSelector:@selector(toDo) withObject:nil afterDelay:10];
+    //[self performSelector:@selector(toDo) withObject:nil afterDelay:10];
 }
 
 - (void)toDo{

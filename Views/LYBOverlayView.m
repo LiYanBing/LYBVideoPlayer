@@ -9,6 +9,7 @@
 #import "LYBOverlayView.h"
 #import "UIView+THAdditions.h"
 #import "NSTimer+Additions.h"
+#import "LYBFilmstripView.h"
 #import <MediaPlayer/MediaPlayer.h>
 
 #define WIDTH   [UIScreen mainScreen].bounds.size.width
@@ -28,6 +29,8 @@
  * 视频场景是否隐藏
  */
 @property (nonatomic,assign) BOOL      filmstripHidden;
+
+@property (weak, nonatomic) IBOutlet LYBFilmstripView *filmStripView;
 
 @property (nonatomic,assign) CGFloat        infoViewOffset;
 @property (nonatomic,strong) NSTimer      * timer;
@@ -55,6 +58,7 @@
 - (void)setIsFullScreen:(BOOL)isFullScreen{
     _isFullScreen = isFullScreen;
     self.netAlertView.center = self.center;
+    [self.filmStripView show];
     self.fullbutton.selected = isFullScreen;
 }
 
@@ -70,6 +74,7 @@
     self.scrubberSlider.maximumTrackTintColor = [UIColor clearColor];
     
     self.infoView.hidden = YES;
+    self.filmstripHidden = YES;
     self.screenType      = UIScreenTypeLeft;
     
     [self calculateInfoViewOffset];
@@ -105,6 +110,7 @@
     self.netAlertView.clipsToBounds      = YES;
     self.netAlertView.hidden             = YES;
     //self.netAlertView.alpha              = 0;
+    
 }
 
 /**
@@ -142,35 +148,38 @@
  * 屏幕点击手势
  */
 - (IBAction)toggleControls:(id)sender {
-    [UIView animateWithDuration:0.35 animations:^{
-        if (!self.controlsHidden) {
-            if (!self.filmstripHidden) {
+    if (!self.controlsHidden) {
+        if (!self.filmstripHidden) {
+            [UIView animateWithDuration:0.35 animations:^{
+                self.filmStripView.frameY -= self.filmStripView.frameHeight;
+                self.filmstripHidden = YES;
+                self.filmstripToggleButton.selected = NO;
+            } completion:^(BOOL complete) {
+                self.filmStripView.hidden = YES;
                 [UIView animateWithDuration:0.35 animations:^{
-                    //self.filmStripView.frameY -= self.filmStripView.frameHeight;
-                    self.filmstripHidden = YES;
-                    //self.filmstripToggleButton.selected = NO;
-                } completion:^(BOOL complete) {
-                    //self.filmStripView.hidden = YES;
-                    [UIView animateWithDuration:0.35 animations:^{
-                        self.navgationBar.frameY -= self.navgationBar.frameHeight;
-                        self.toolBar.frameY += self.toolBar.frameHeight;
-                        //[self hidePopupUI];
-                        [[UIApplication sharedApplication] setStatusBarHidden:YES animated:YES];
-                    }];
+                    self.navgationBar.frameY -= self.navgationBar.frameHeight;
+                    self.toolBar.frameY += self.toolBar.frameHeight;
+                    //[self hidePopupUI];
+                    [[UIApplication sharedApplication] setStatusBarHidden:YES animated:YES];
                 }];
-            } else {
+            }];
+        } else {
+            [UIView animateWithDuration:0.35 animations:^{
                 self.navgationBar.frameY -= self.navgationBar.frameHeight;
                 self.toolBar.frameY += self.toolBar.frameHeight;
                 //[self hidePopupUI];
                 [[UIApplication sharedApplication] setStatusBarHidden:YES animated:YES];
-            }
-        } else {
+            }];
+            
+        }
+    } else {
+        [UIView animateWithDuration:0.35 animations:^{
             self.navgationBar.frameY += self.navgationBar.frameHeight;
             self.toolBar.frameY -= self.toolBar.frameHeight;
             [[UIApplication sharedApplication] setStatusBarHidden:NO animated:YES];
-        }
-        self.controlsHidden = !self.controlsHidden;
-    }];
+        }];
+    }
+    self.controlsHidden = !self.controlsHidden;
     [self resetTimer];
 }
 
@@ -260,23 +269,32 @@
 /**
  * 关闭视频
  */
-- (IBAction)closeControls:(id)sender {
-    [self.timer invalidate];
-    self.timer = nil;
-    [self.delegate stop];
-}
 
-/**
- * 展示
- */
-- (void)showControls:(UIButton *)button{
-    
+- (IBAction)show:(id)sender {
+    if (self.filmstripHidden) {
+        [self.filmStripView show];
+    }
+    [UIView animateWithDuration:0.35 animations:^{
+        if (self.filmstripHidden) {
+            self.filmStripView.hidden = NO;
+            self.filmStripView.frameY = 0;
+        } else {
+            self.filmStripView.frameY -= self.filmStripView.frameHeight;
+        }
+        self.filmstripHidden = !self.filmstripHidden;
+    } completion:^(BOOL complete) {
+        if (self.filmstripHidden) {
+            self.filmStripView.hidden = YES;
+        }
+    }];
+    self.filmstripToggleButton.selected = !self.filmstripToggleButton.selected;
 }
 
 /**
  * 全屏切换
  */
 - (IBAction)changeScreen:(id)sender {
+    [self.filmStripView show];
     if (self.isFullScreen) {
         [self.delegate portraitScreen];
     }else{
